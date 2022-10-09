@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+.container {
+    background-image: linear-gradient(30deg, #a1c4fd 0%, #c2e9fb 100%);
+    border-radius: 30px;
+    -webkit-box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+    box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+
+    #main {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+.display {
+    height: 100px;
+    width: 300px;
+    border-radius: 20px;
+    background-image: linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    // -webkit-box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+    //     -moz-box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+    //     box-shadow: 7px 8px 17px -8px rgba(66, 68, 90, 1);
+
+    p {
+        text-align: right;
+    }
+
+    &__text {
+        font-family: 'Gemunu Libre', sans-serif;
+
+        &--bottom {
+            font-size: 26px;
+        }
+        
+        &--top {
+            opacity: .7;
+        }
+    }
+}
+.keyboard {
+    height: 400px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    button {
+        font-family: 'Gemunu Libre', sans-serif;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        background-color: #ffffff;
+
+        cursor: pointer;
+        transition: background-color .2s ease, box-shadow .2s ease;
+
+        &:hover {
+            background-color: #d4d4d4;
+            -webkit-box-shadow: 7px 8px 17px -13px rgba(66, 68, 90, 1);
+            -moz-box-shadow: 7px 8px 17px -13px rgba(66, 68, 90, 1);
+            box-shadow: 7px 8px 17px -13px rgba(66, 68, 90, 1);
+        }
+    }
+}
+
