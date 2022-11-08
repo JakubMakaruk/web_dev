@@ -63,7 +63,6 @@ function createBoard() {
     for (let i=0; i<9; i++) {
         let cell = document.createElement('div');
         cell.classList.add('cell');
-        // cell.innerHTML = 'X';
         cell.addEventListener('click', () => userAction(cell, i));
         container.appendChild(cell);
     }
