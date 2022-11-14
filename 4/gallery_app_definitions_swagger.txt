@@ -1,0 +1,62 @@
+User:
+    type: object
+    properties:
+      id:
+        type: integer
+        readOnly: true
+      email:
+        type: string
+        format: email
+      password:
+        type: string
+        format: password
+  Image:
+    type: object
+    properties:
+      id:
+        type: integer
+        readOnly: true
+      title:
+        type: string
+      description:
+        type: string
+      format:
+        type: string
+      height:
+        type: integer
+      width:
+        type: integer
+      size:
+        type: integer
+      dateUploaded:
+        type: string
+        format: date-time
+  Images:
+    type: array
+    items:
+      $ref: '#/definitions/Image'
+  Folder:
+    type: object
+    properties:
+      id:
+        type: integer
+        readOnly: true
+      name:
+        type: string
+      images:
+        type: array
+        items:
+          $ref: '#/definitions/Image'
+  Presentation:
+    type: array
+    items:
+      $ref: '#/definitions/Image'
+  
+  ImageResponseGet:
+    $ref: '#/definitions/Image'
+  ImagesResponseGet:
+    $ref: '#/definitions/Images'
+  FolderResponseGet:
+    $ref: '#/definitions/Folder'
+  PresentationResponseGet:
+    $ref: '#/definitions/Presentation'
